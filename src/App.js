@@ -1,5 +1,7 @@
+import React from "react";
+import AboutPage from "./page/AboutPage";
 function App() {
-  return <div className="App"></div>;
+  return <AboutPage />;
 }
 
 export default App;
