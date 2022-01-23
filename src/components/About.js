@@ -1,10 +1,17 @@
 import React from "react";
 import profile1 from "../img/profile1.png";
+import { scroller } from "react-scroll";
 
 import styled from "styled-components";
 const About = () => {
+  scroller.scrollTo("dept", {
+    duration: 800,
+    delay: 0,
+    offset: 350,
+    smooth: "easeInOutQuart",
+  });
   return (
-    <Aboutsection>
+    <Aboutsection id="about">
       <div className="description">
         <div className="title">
           <div className="collapse">
@@ -13,7 +20,21 @@ const About = () => {
           <div className="collapse">
             <h2>I'm Siam Ahmed</h2>
           </div>
-          <p>About my self bla bal bal</p>
+        </div>
+
+        <div className="cards">
+          <div className="card">
+            <h3>Web Developer</h3>
+            <p>Passionate about front-end designing & programming.</p>
+          </div>
+          <div className="card">
+            <h3>Proficiency</h3>
+            <p>I have a decent knowledge about HTML5,Sass, ReactJS. </p>
+          </div>
+          <div className="card">
+            <h3>NSUer</h3>
+            <p>Graduated from North South University.</p>
+          </div>
         </div>
       </div>
       <div className="image">
@@ -28,26 +49,40 @@ const Aboutsection = styled.div`
   align-items: center;
   justify-content: space-between;
   display: flex;
-  padding: 5rem 20rem 0rem 20rem;
+  padding: 5rem 15vw 13rem 15vw;
   .description {
+    .title {
+      h1 {
+        font-size: 10rem;
+        font-weight: 800;
+        color: #03e8b9;
+      }
+      h2 {
+        margin: 2rem 0rem;
+        font-size: 4rem;
+        font-weight: 600;
+        color: #70e8fd;
+      }
+    }
+    .cards {
+      display: flex;
+      .card {
+        padding: 10px;
+        background-color: #282f51;
+        margin-right: 1rem;
+      }
+      h3 {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: #72d9ff;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: #cdffff;
+      }
+    }
   }
-  .title {
-    h1 {
-      font-size: 10rem;
-      color: #03e8b9;
-    }
-    h2 {
-      font-size: 4rem;
-      font-weight: 600;
-      color: #03e8e8;
-    }
-    p {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #99f5f5;
-    }
-  }
-
   .image {
     img {
       height: 50rem;

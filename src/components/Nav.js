@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { scroller, Link } from "react-scroll";
 const Nav = () => {
   return (
     <NavStyled>
@@ -10,18 +11,33 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <a href="">ABOUT</a>
+          <Link id="a" to="about" smooth={true} duration={500}>
+            ABOUT
+          </Link>
         </li>
         <li>
-          <a href="">SKILLS</a>
+          <Link id="a" to="skill" smooth={true} duration={500}>
+            SKILLS
+          </Link>
         </li>
         <li>
-          <a href="">PROJECTS</a>
+          <a id="a" href="">
+            PROJECTS
+          </a>
         </li>
         <li>
-          <a href="">PROFILES</a>
+          <a id="a" href="">
+            PROFILES
+          </a>
+        </li>
+        <li>
+          <a id="a" href="">
+            RÉSUMÉ
+          </a>
         </li>
       </ul>
+
+      <button>CONTACT</button>
     </NavStyled>
   );
 };
@@ -34,7 +50,7 @@ const NavStyled = styled.nav`
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10rem;
+  padding: 2rem 6vw;
   background-color: #11152be1;
   border-bottom: 1px solid #2e355a;
   #logo {
@@ -42,7 +58,14 @@ const NavStyled = styled.nav`
     font-family: "lobster", cursive;
     color: #dadada;
   }
+  #a {
+    cursor: pointer;
+    color: #dadada;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
   a {
+    cursor: pointer;
     color: #dadada;
     text-decoration: none;
     font-size: 1.2rem;
@@ -53,7 +76,8 @@ const NavStyled = styled.nav`
     align-items: center;
     list-style: none;
     li {
-      padding-left: 10rem;
+      padding-left: 2vw;
+      padding-right: 2vw;
       position: relative;
     }
   }
