@@ -27,7 +27,7 @@ const Nav = () => {
         </li>
         <li>
           <Link id="a" to="profile" smooth={true} duration={500}>
-            PROFILES
+            SOCIALS
           </Link>
         </li>
         <li>
@@ -64,6 +64,10 @@ const NavStyled = styled.nav`
     color: #dadada;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: all 0.5s ease;
+    &:hover {
+      color: #03e8b9;
+    }
   }
   a {
     cursor: pointer;

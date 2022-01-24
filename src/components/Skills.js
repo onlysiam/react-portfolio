@@ -19,6 +19,7 @@ import { useScroll } from "./useScroll";
 
 const Skills = () => {
   const [element, controls] = useScroll();
+  console.log(element);
   return (
     <Skillssection
       variants={fadeAnimation}
