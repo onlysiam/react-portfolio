@@ -86,25 +86,25 @@ export const skillTitleAnimation = {
 };
 
 export const fadedSlideLeft = {
-  hidden: { opacity: 0, x: 500, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, x: 200, transition: { duration: 0.3 } },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeOut",
-      duration: 0.75,
+      duration: 1,
     },
   },
 };
 
 export const fadedSlideRight = {
-  hidden: { opacity: 0, x: -500, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, x: -200, transition: { duration: 0.3 } },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeOut",
-      duration: 0.75,
+      duration: 1,
     },
   },
 };

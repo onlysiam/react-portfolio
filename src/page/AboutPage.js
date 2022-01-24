@@ -2,6 +2,7 @@ import react from "react";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Profiles from "../components/Profiles";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
@@ -17,6 +18,7 @@ const AboutPage = () => {
       <About />
       <Skills />
       <Projects />
+      <Profiles />
       <Scrolltop />
     </motion.div>
   );

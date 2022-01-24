@@ -108,7 +108,7 @@ const Skillssection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 15vw 15rem 15vw;
+  padding: 5rem 15vw 0rem 15vw;
   z-index: 2;
   .laptop {
     z-index: 2;

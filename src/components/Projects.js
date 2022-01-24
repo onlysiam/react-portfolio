@@ -208,7 +208,7 @@ const Projectstyle = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   margin-top: 15rem;
-  padding: 5rem 15vw 15rem 15vw;
+  padding: 5rem 15vw 0rem 15vw;
   .title {
     h2 {
       font-size: 4rem;

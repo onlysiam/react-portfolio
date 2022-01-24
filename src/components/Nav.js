@@ -26,7 +26,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link id="a" to="profiles" smooth={true} duration={500}>
+          <Link id="a" to="profile" smooth={true} duration={500}>
             PROFILES
           </Link>
         </li>
