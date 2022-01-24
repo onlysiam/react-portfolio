@@ -8,11 +8,27 @@ import node from "../img/node.png";
 import laptop from "../img/laptop.jfif";
 import styled from "styled-components";
 
+import { motion } from "framer-motion";
+import {
+  skillTitleAnimation,
+  fadeAnimation,
+  slideAnimation,
+} from "../animation";
+
+import { useScroll } from "./useScroll";
+
 const Skills = () => {
+  const [element, controls] = useScroll();
   return (
-    <Skillssection id="skill">
+    <Skillssection
+      variants={fadeAnimation}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+      id="skill"
+    >
       <div className="laptop">
-        <img src={laptop} alt="" />
+        <motion.img variants={fadeAnimation} src={laptop} alt="" />
       </div>
       <div className="description">
         <div className="title">
@@ -20,59 +36,67 @@ const Skills = () => {
         </div>
         <div className="cards">
           <div className="upper row">
-            <div className="card">
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={react} alt="" />
-                <h3>React</h3>
+                <motion.h3 variants={slideAnimation}>React</motion.h3>
               </div>
-              <p>- JSX</p>
-              <p>- Router Dom</p>
-              <p>- Redux</p>
-            </div>
-            <div className="card">
+              <motion.p variants={skillTitleAnimation}>- JSX</motion.p>
+              <motion.p variants={skillTitleAnimation}>- Router Dom</motion.p>
+              <motion.p variants={skillTitleAnimation}>- Redux</motion.p>
+            </motion.div>
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={js} alt="" />
-                <h3>JavaScript</h3>
+                <motion.h3 variants={slideAnimation}>JavaScript</motion.h3>
               </div>
-              <p>- ES5, ES6</p>
-              <p>- Error Handling</p>
-              <p>- DOM Manipulation</p>
-            </div>
+              <motion.p variants={skillTitleAnimation}>- ES5, ES6</motion.p>
+              <motion.p variants={skillTitleAnimation}>
+                - Error Handling
+              </motion.p>
+              <motion.p variants={skillTitleAnimation}>
+                - DOM Manipulation
+              </motion.p>
+            </motion.div>
           </div>
           <div className="middle row">
-            <div className="card">
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={vue} alt="" />
-                <h3>Vue.js</h3>
+                <motion.h3 variants={slideAnimation}>Vue.js</motion.h3>
               </div>
-              <p>- Learning</p>
-            </div>
-            <div className="card">
+              <motion.p variants={skillTitleAnimation}>- Learning</motion.p>
+            </motion.div>
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={node} alt="" />
-                <h3>Node.JS</h3>
+                <motion.h3 variants={slideAnimation}>Node.JS</motion.h3>
               </div>
-              <p>- Express</p>
-              <p>- Axios</p>
-            </div>
+              <motion.p variants={skillTitleAnimation}>- Express</motion.p>
+              <motion.p variants={skillTitleAnimation}>- Axios</motion.p>
+            </motion.div>
           </div>
           <div className="lower row">
-            <div className="card">
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={html} alt="" />
-                <h3>HTML & Css</h3>
+                <motion.h3 variants={slideAnimation}>HTML & Css</motion.h3>
               </div>
-              <p>- HTML5</p>
-              <p>- Responsive Design</p>
-              <p>- Built From Scratch</p>
-            </div>
-            <div className="card">
+              <motion.p variants={skillTitleAnimation}>- HTML5</motion.p>
+              <motion.p variants={skillTitleAnimation}>
+                - Responsive Design
+              </motion.p>
+              <motion.p variants={skillTitleAnimation}>
+                - Built From Scratch
+              </motion.p>
+            </motion.div>
+            <motion.div variants={slideAnimation} className="card">
               <div className="icon">
                 <img src={scss} alt="" />
-                <h3>Sass</h3>
+                <motion.h3 variants={slideAnimation}>Sass</motion.h3>
               </div>
-              <p>- Mapping</p>
-            </div>
+              <motion.p variants={skillTitleAnimation}>- Mapping</motion.p>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -80,17 +104,21 @@ const Skills = () => {
   );
 };
 
-const Skillssection = styled.div`
+const Skillssection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 15vw 15rem 15vw;
+  padding: 5rem 15vw 15rem 15vw;
+  z-index: 2;
   .laptop {
+    z-index: 2;
     img {
+      z-index: 2;
       height: 25rem;
     }
   }
   .description {
+    z-index: 2;
     .title {
       h1 {
         font-size: 10rem;
@@ -105,6 +133,7 @@ const Skillssection = styled.div`
       }
     }
     .cards {
+      z-index: 2;
       display: flex;
       flex-direction: column;
       flex: 1;

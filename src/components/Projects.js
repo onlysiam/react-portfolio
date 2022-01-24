@@ -1,4 +1,7 @@
 import React from "react";
+
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 const Projects = () => {
   return (
     <div className="projects">

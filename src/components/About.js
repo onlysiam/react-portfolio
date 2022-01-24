@@ -1,56 +1,61 @@
 import React from "react";
 import profile1 from "../img/profile1.png";
-import { scroller } from "react-scroll";
+
+import { motion } from "framer-motion";
+import { pageAnimation, titleAnimation, cardAnimation } from "../animation";
 
 import styled from "styled-components";
+import Wave from "./Wave";
 const About = () => {
-  scroller.scrollTo("dept", {
-    duration: 800,
-    delay: 0,
-    offset: 350,
-    smooth: "easeInOutQuart",
-  });
   return (
-    <Aboutsection id="about">
+    <Aboutsection
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      id="about"
+    >
       <div className="description">
         <div className="title">
           <div className="collapse">
-            <h1>Hello</h1>
+            <motion.h1 variants={titleAnimation}>Hello</motion.h1>
           </div>
           <div className="collapse">
-            <h2>I'm Siam Ahmed</h2>
+            <motion.h2 variants={titleAnimation}>I'm Siam Ahmed</motion.h2>
           </div>
         </div>
 
         <div className="cards">
-          <div className="card">
+          <motion.div variants={cardAnimation} className="card">
             <h3>Web Developer</h3>
             <p>Passionate about front-end designing & programming.</p>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div variants={cardAnimation} className="card">
             <h3>Proficiency</h3>
             <p>I have a decent knowledge about HTML5,Sass, ReactJS. </p>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div variants={cardAnimation} className="card">
             <h3>NSUer</h3>
             <p>Graduated from North South University.</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="image">
         <img src={profile1} alt="" />
       </div>
+      <Wave />
     </Aboutsection>
   );
 };
 
-const Aboutsection = styled.div`
+const Aboutsection = styled(motion.div)`
   min-height: 90vh;
   align-items: center;
   justify-content: space-between;
   display: flex;
   padding: 5rem 15vw 13rem 15vw;
+  z-index: 2;
   .description {
+    z-index: 2;
     .title {
       h1 {
         font-size: 10rem;
@@ -84,6 +89,7 @@ const Aboutsection = styled.div`
     }
   }
   .image {
+    z-index: 2;
     img {
       height: 50rem;
     }

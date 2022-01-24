@@ -3,16 +3,21 @@ import AboutPage from "./page/AboutPage";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
     <div>
       <Nav />
       <GlobalStyle />
-      <Routes>
-        <Route path="/" element={<AboutPage />} />
-      </Routes>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<AboutPage />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

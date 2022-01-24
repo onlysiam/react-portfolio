@@ -53,6 +53,7 @@ const NavStyled = styled.nav`
   padding: 2rem 6vw;
   background-color: #11152be1;
   border-bottom: 1px solid #2e355a;
+  z-index: 10;
   #logo {
     font-size: 1.7rem;
     font-family: "lobster", cursive;
