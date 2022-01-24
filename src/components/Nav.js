@@ -21,19 +21,19 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <a id="a" href="">
+          <Link id="a" to="project" smooth={true} duration={500}>
             PROJECTS
-          </a>
+          </Link>
         </li>
         <li>
-          <a id="a" href="">
+          <Link id="a" to="profiles" smooth={true} duration={500}>
             PROFILES
-          </a>
+          </Link>
         </li>
         <li>
-          <a id="a" href="">
+          <Link id="a" to="resume" smooth={true} duration={500}>
             RÉSUMÉ
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -80,6 +80,23 @@ const NavStyled = styled.nav`
       padding-left: 2vw;
       padding-right: 2vw;
       position: relative;
+    }
+  }
+  button {
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1.3rem;
+    background: transparent;
+    font-family: "Barlow", sans-serif;
+    color: #dadada;
+    border-radius: 30px;
+    border: 1px solid #dbdbdb;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    &:hover {
+      border: 1px solid #000000;
+      background-color: #03e8b9;
+      color: black;
     }
   }
 `;
