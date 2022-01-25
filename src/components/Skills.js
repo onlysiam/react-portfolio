@@ -172,5 +172,187 @@ const Skillssection = styled(motion.div)`
       }
     }
   }
+
+  @media (max-width: 1850px) {
+    padding: 5rem 10vw 0rem 10vw;
+  }
+  @media (max-width: 1600px) {
+    padding: 5rem 10vw 0rem 10vw;
+    .laptop {
+      img {
+        height: 20rem;
+      }
+    }
+    .description {
+      .title {
+        h2 {
+          font-size: 4rem;
+        }
+      }
+      .cards {
+        .card {
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+          img {
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    padding: 5rem 8vw 0rem 8vw;
+    .laptop {
+      img {
+        height: 20rem;
+      }
+    }
+    .description {
+      .title {
+        h2 {
+          font-size: 3.5rem;
+        }
+      }
+      .cards {
+        .card {
+          margin-right: 1rem;
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+          img {
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 5rem 8vw 0rem 8vw;
+    .laptop {
+      img {
+        height: 20rem;
+      }
+    }
+    .description {
+      .title {
+        h2 {
+          font-size: 3.1rem;
+        }
+      }
+      .cards {
+        .card {
+          width: 10rem;
+          margin-right: 4rem;
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    padding: 3rem 6vw 0rem 6vw;
+    .laptop {
+      img {
+        height: 16rem;
+      }
+    }
+    .description {
+      .title {
+        h2 {
+          font-size: 2.9rem;
+        }
+      }
+      .cards {
+        .card {
+          width: 8rem;
+          margin-right: 3rem;
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 850px) {
+    padding: 3rem 3vw 0rem 3vw;
+    .description {
+      .title {
+        h2 {
+          font-size: 2.9rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .cards {
+        .card {
+          width: 8rem;
+          margin-right: 3rem;
+          margin-top: 1rem;
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    .laptop {
+      img {
+        display: none;
+      }
+    }
+    .description {
+      .title {
+        h2 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .cards {
+        .card {
+          width: 8rem;
+          margin-right: 3rem;
+          margin-top: 1rem;
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
 `;
 export default Skills;

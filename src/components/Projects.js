@@ -85,6 +85,7 @@ const Projects = () => {
           initial="hidden"
           ref={element2}
           className="weathercloset project"
+          id="wc"
         >
           <div className="description">
             <h3>Weather Closet</h3>
@@ -254,7 +255,7 @@ const Projectstyle = styled(motion.div)`
           display: flex;
           align-items: center;
           button {
-            margin-top: 5rem;
+            margin-top: 3rem;
             margin-right: 1rem;
             font-weight: 400;
             cursor: pointer;
@@ -277,6 +278,127 @@ const Projectstyle = styled(motion.div)`
             padding: 0px 20px;
             img {
               height: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1600px) {
+    padding: 5rem 10vw 0rem 10vw;
+  }
+  @media (max-width: 1400px) {
+    padding: 5rem 8vw 0rem 8vw;
+    .projects {
+      .project {
+        .img {
+          img {
+            height: 25rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    padding: 5rem 6vw 0rem 6vw;
+    .projects {
+      .project {
+        .img {
+          img {
+            height: 18rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    overflow-x: hidden;
+    margin-top: 15rem;
+    padding: 3rem 3vw 1rem 3vw;
+    .title {
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+    .projects {
+      .project {
+        margin-bottom: 5rem;
+        flex-direction: column;
+        .img {
+          img {
+            height: 18rem;
+          }
+        }
+        .description {
+          width: 70%;
+          h1 {
+            padding-left: 10px;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          h3 {
+            padding-left: 10px;
+            font-size: 2rem;
+          }
+          p {
+            padding-left: 20px;
+            font-size: 1.3rem;
+          }
+
+          .viewWork {
+            display: flex;
+            align-items: center;
+            button {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    overflow-x: hidden;
+    margin-top: 15rem;
+    padding: 3rem 6vw 1rem 6vw;
+    .title {
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+    .projects {
+      .project {
+        margin-bottom: 5rem;
+        align-items: center;
+        flex-direction: column;
+        .img {
+          img {
+            width: 100%;
+            height: 12rem;
+          }
+        }
+        .description {
+          width: 100%;
+          h1 {
+            padding-left: 10px;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+          }
+          h3 {
+            padding-left: 10px;
+            font-size: 2rem;
+          }
+          p {
+            padding-left: 20px;
+            font-size: 1.3rem;
+          }
+
+          .viewWork {
+            display: flex;
+            align-items: center;
+            button {
+              margin-bottom: 3rem;
             }
           }
         }

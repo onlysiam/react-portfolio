@@ -18,7 +18,7 @@ const Profiles = () => {
   const [element, controls] = useScroll();
   return (
     <ProfileStyle
-      variants={fadeAnimation}
+      // variants={fadeAnimation}
       animate={controls}
       initial="hidden"
       ref={element}
@@ -174,7 +174,7 @@ const ProfileStyle = styled(motion.div)`
   justify-content: space-between;
   z-index: 2;
   h2 {
-    padding: 5rem 15vw 0rem 15vw;
+    padding: 12rem 15vw 0rem 15vw;
     margin-bottom: 2rem;
     font-size: 4rem;
     font-weight: 600;
@@ -248,7 +248,7 @@ const ProfileStyle = styled(motion.div)`
     justify-content: center;
     height: 15rem;
     border-top: 1px solid #2e355a;
-    margin-top: 15rem;
+    margin-top: 22rem;
     .socialsFooter {
       display: flex;
       justify-content: space-evenly;
@@ -278,6 +278,66 @@ const ProfileStyle = styled(motion.div)`
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .socials {
+      display: flex;
+      flex-direction: column;
+      .github {
+        margin-top: 2rem;
+      }
+      .linkedin {
+        margin-top: 2rem;
+      }
+      .email {
+        margin-top: 2rem;
+      }
+    }
+    .footer {
+      margin-top: 12rem;
+      .socialsFooter {
+        svg {
+          height: 30px;
+        }
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    h2 {
+      padding: 5rem 5vw 0rem 5vw;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+    }
+    .socials {
+      display: flex;
+      flex-direction: column;
+      padding: 0rem 0vw 0rem 0vw;
+      .github {
+        margin-top: 2rem;
+      }
+      .linkedin {
+        margin-top: 2rem;
+      }
+      .email {
+        margin-top: 2rem;
+      }
+    }
+    .footer {
+      margin-top: 7rem;
+      .socialsFooter {
+        svg {
+          height: 30px;
+        }
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   }
 `;

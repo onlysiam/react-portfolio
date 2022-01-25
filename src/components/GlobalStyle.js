@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+html{
+  
+  overflow-x: hidden;
+}
 body{
     background: #11152B;
     font-family: 'Barlow', sans-serif;

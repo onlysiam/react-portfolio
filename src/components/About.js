@@ -71,6 +71,7 @@ const Aboutsection = styled(motion.div)`
     }
     .cards {
       display: flex;
+      flex-direction: row;
       .card {
         padding: 10px;
         background-color: #282f51;
@@ -92,6 +93,157 @@ const Aboutsection = styled(motion.div)`
     z-index: 2;
     img {
       height: 50rem;
+    }
+  }
+
+  @media (max-width: 1650px) {
+    padding: 5rem 10vw 13rem 10vw;
+    .image {
+      z-index: 2;
+      img {
+        height: 45rem;
+      }
+    }
+  }
+  @media (max-width: 1450px) {
+    padding: 5rem 8vw 13rem 8vw;
+    .description {
+      .title {
+        h1 {
+          font-size: 8rem;
+        }
+        h2 {
+          margin: 1rem 0rem;
+          font-size: 3rem;
+        }
+      }
+      .card {
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .image {
+      z-index: 2;
+      img {
+        height: 40rem;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    padding: 4rem 6vw 10rem 6vw;
+    .description {
+      .title {
+        h1 {
+          font-size: 7rem;
+        }
+        h2 {
+          margin: 1rem 0rem;
+          font-size: 2rem;
+        }
+      }
+      .card {
+        h3 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+      }
+    }
+    .image {
+      z-index: 2;
+      img {
+        height: 38rem;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .description {
+      .title {
+        h1 {
+          font-size: 5rem;
+        }
+        h2 {
+          margin: 0.7rem 0rem;
+          font-size: 2rem;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        .card {
+          margin-top: 1rem;
+          width: 80%;
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .image {
+      position: absolute;
+      right: 5%;
+      z-index: 20;
+      img {
+        height: 30rem;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .description {
+      .title {
+        h1 {
+          font-size: 4rem;
+        }
+        h2 {
+          margin: 0.7rem 0rem;
+          font-size: 1.5rem;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        z-index: 20;
+        .card {
+          margin-top: 1rem;
+          width: 80%;
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .image {
+      position: absolute;
+      top: 12%;
+      right: 1%;
+      z-index: 2;
+      img {
+        height: 25rem;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 18rem 6vw 8rem 6vw;
+    .image {
+      position: absolute;
+      top: 15%;
+      right: 1%;
+      z-index: 1;
+      img {
+        height: 22rem;
+      }
     }
   }
 `;

@@ -11,27 +11,67 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link id="a" to="about" smooth={true} duration={500}>
+          <Link
+            className="element"
+            id="a"
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             ABOUT
           </Link>
         </li>
         <li>
-          <Link id="a" to="skill" smooth={true} duration={500}>
+          <Link
+            className="element"
+            id="a"
+            activeClass="active"
+            to="skill"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             SKILLS
           </Link>
         </li>
         <li>
-          <Link id="a" to="project" smooth={true} duration={500}>
+          <Link
+            className="element"
+            id="a"
+            activeClass="active"
+            to="project"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             PROJECTS
           </Link>
         </li>
         <li>
-          <Link id="a" to="profile" smooth={true} duration={500}>
+          <Link
+            className="element"
+            id="a"
+            activeClass="active"
+            to="profile"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             SOCIALS
           </Link>
         </li>
         <li>
-          <Link id="a" to="resume" smooth={true} duration={500}>
+          <Link
+            className="element"
+            id="a"
+            activeClass="active"
+            to="resume"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             RÉSUMÉ
           </Link>
         </li>
@@ -59,7 +99,7 @@ const NavStyled = styled.nav`
     font-family: "lobster", cursive;
     color: #dadada;
   }
-  #a {
+  .element {
     cursor: pointer;
     color: #dadada;
     text-decoration: none;
@@ -68,6 +108,9 @@ const NavStyled = styled.nav`
     &:hover {
       color: #03e8b9;
     }
+  }
+  .element.active {
+    color: #03e8b9;
   }
   a {
     cursor: pointer;
@@ -101,6 +144,42 @@ const NavStyled = styled.nav`
       border: 1px solid #000000;
       background-color: #03e8b9;
       color: black;
+    }
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0rem 6vw;
+    height: 7rem;
+    #logo {
+      display: inline-block;
+      font-size: 1.7rem;
+      padding: 1rem;
+    }
+    li {
+      padding-bottom: 1rem;
+    }
+    button {
+      position: absolute;
+      font-size: 1rem;
+      right: 0;
+      top: 0;
+      margin: 1rem 1rem;
+    }
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    padding: 0rem 4vw;
+    height: 7rem;
+    #logo {
+      display: inline-block;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+    #a {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 0.8rem;
     }
   }
 `;
