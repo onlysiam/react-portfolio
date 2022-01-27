@@ -73,7 +73,14 @@ const Projects = () => {
               >
                 View work
               </button>
-              <button id="git">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://github.com/onlysiam/campus-assistant-react"
+                  );
+                }}
+                id="git"
+              >
                 <img src={git} alt="" />
               </button>
             </div>
@@ -102,7 +109,14 @@ const Projects = () => {
               >
                 View work
               </button>
-              <button id="git">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://github.com/onlysiam/react-weather-closet"
+                  );
+                }}
+                id="git"
+              >
                 <img src={git} alt="" />
               </button>
             </div>
@@ -133,7 +147,14 @@ const Projects = () => {
               >
                 View work
               </button>
-              <button id="git">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://github.com/onlysiam/online-music-player"
+                  );
+                }}
+                id="git"
+              >
                 <img src={git} alt="" />
               </button>
             </div>
@@ -162,7 +183,14 @@ const Projects = () => {
               >
                 View work
               </button>
-              <button id="git">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://github.com/onlysiam/greentouchgroup.git"
+                  );
+                }}
+                id="git"
+              >
                 <img src={git} alt="" />
               </button>
             </div>
@@ -193,7 +221,12 @@ const Projects = () => {
               >
                 View work
               </button>
-              <button id="git">
+              <button
+                onClick={() => {
+                  window.open("https://github.com/onlysiam/cgpa101");
+                }}
+                id="git"
+              >
                 <img src={git} alt="" />
               </button>
             </div>

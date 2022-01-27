@@ -71,6 +71,11 @@ const Nav = () => {
             spy={true}
             smooth={true}
             duration={500}
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1x_qmeB9ZRdj_fh6t6AlOMRo8iY2ectnU/view?usp=sharing"
+              );
+            }}
           >
             RÉSUMÉ
           </Link>
@@ -98,6 +103,10 @@ const NavStyled = styled.nav`
     font-size: 1.7rem;
     font-family: "lobster", cursive;
     color: #dadada;
+    transition: all 0.5s ease;
+    &:hover {
+      color: #03e8b9;
+    }
   }
   .element {
     cursor: pointer;
