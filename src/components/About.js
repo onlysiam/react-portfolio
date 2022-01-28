@@ -58,13 +58,13 @@ const Aboutsection = styled(motion.div)`
     z-index: 2;
     .title {
       h1 {
-        font-size: 10rem;
+        font-size: 8rem;
         font-weight: 800;
         color: #03e8b9;
       }
       h2 {
-        margin: 2rem 0rem;
-        font-size: 4rem;
+        margin: 1rem 0rem 2.5rem 0rem;
+        font-size: 3rem;
         font-weight: 600;
         color: #70e8fd;
       }
@@ -113,7 +113,7 @@ const Aboutsection = styled(motion.div)`
           font-size: 8rem;
         }
         h2 {
-          margin: 1rem 0rem;
+          margin: 1rem 0rem 2.5rem 0rem;
           font-size: 3rem;
         }
       }
@@ -135,14 +135,14 @@ const Aboutsection = styled(motion.div)`
     }
   }
   @media (max-width: 1200px) {
-    padding: 4rem 6vw 10rem 6vw;
+    padding: 9rem 6vw 10rem 6vw;
     .description {
       .title {
         h1 {
           font-size: 7rem;
         }
         h2 {
-          margin: 1rem 0rem;
+          margin: 1rem 0rem 2.5rem 0rem;
           font-size: 2rem;
         }
       }
