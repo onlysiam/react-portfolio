@@ -6,9 +6,8 @@ import ProgressBar from "./ProgressBar";
 import styled from "styled-components";
 //animations
 import { motion } from "framer-motion";
-import { skillTitleAnimation, slideAnimation } from "../animation";
+import { skillTitleAnimation, slideAnimation } from "../../animation";
 const SkillCard = ({ data, image }) => {
-  console.log(data.image);
   return (
     <Card variants={slideAnimation} className="card">
       <div className="icon">
@@ -20,8 +19,7 @@ const SkillCard = ({ data, image }) => {
           - {ptag.body}
         </motion.p>
       ))}
-      {/* <motion.p variants={skillTitleAnimation}>- Hooks</motion.p>
-      <motion.p variants={skillTitleAnimation}>- Router</motion.p> */}
+
       <motion.div variants={slideAnimation} className="progressBar">
         <ProgressBar skillName={data.progress} />
       </motion.div>

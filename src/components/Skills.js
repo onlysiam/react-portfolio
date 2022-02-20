@@ -1,6 +1,6 @@
 import React from "react";
 //data
-import skillData from "./SkillCardData";
+import skillData from "./skills/SkillCardData";
 //images
 import react from "../img/react.svg";
 import js from "../img/js.svg";
@@ -16,9 +16,9 @@ import styled from "styled-components";
 
 import { motion } from "framer-motion";
 import { fadeAnimation } from "../animation";
-
+//components
 import { useScroll } from "./useScroll";
-import SkillCard from "./SkillCard";
+import SkillCard from "./skills/SkillCard";
 
 const Skills = () => {
   const [element, controls] = useScroll();
@@ -45,8 +45,8 @@ const Skills = () => {
           <SkillCard data={skillData.mysql} image={mysql} />
           <SkillCard data={skillData.php} image={php} />
         </div>
-        <div className="otherSkills">
-          <div className="webDesign"></div>
+        <div className="secondarySkills">
+          <div className="graphicalDesign"></div>
         </div>
       </div>
     </Skillssection>
@@ -91,30 +91,38 @@ const Skillssection = styled(motion.div)`
     }
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1650px) {
     padding: 0rem 10vw 0rem 10vw;
     .description {
+      width: 80vw;
       .title {
         h2 {
           font-size: 4rem;
         }
       }
+      .cards {
+        gap: 5rem 2rem;
+        width: 80vw;
+      }
     }
   }
-  @media (max-width: 1400px) {
+  @media (max-width: 1450px) {
     padding: 0rem 8vw 0rem 8vw;
-    width: 84vw;
     .description {
-      .title {
-        h2 {
-          font-size: 3.5rem;
-        }
+      width: 84vw;
+      .cards {
+        width: 84vw;
       }
     }
   }
 
   @media (max-width: 1200px) {
+    padding: 0rem 6vw 0rem 6vw;
     .description {
+      width: 88vw;
+      .cards {
+        width: 88vw;
+      }
       .title {
         h2 {
           font-size: 3.1rem;
@@ -123,17 +131,6 @@ const Skillssection = styled(motion.div)`
     }
   }
 
-  @media (max-width: 1100px) {
-    padding: 0rem 6vw 0rem 6vw;
-    width: 88vw;
-    .description {
-      .title {
-        h2 {
-          font-size: 2.9rem;
-        }
-      }
-    }
-  }
   @media (max-width: 850px) {
     .description {
       .title {
@@ -144,18 +141,7 @@ const Skillssection = styled(motion.div)`
       }
     }
   }
-  @media (max-width: 700px) {
-    padding: 0rem 6vw 0rem 6vw;
-    width: 88vw;
-    .description {
-      .title {
-        h2 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-        }
-      }
-    }
-  }
+
   @media (max-width: 500px) {
     padding: 0rem 0vw 0rem 0vw;
     width: 100vw;

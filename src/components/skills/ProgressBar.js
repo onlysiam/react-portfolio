@@ -1,8 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { fetchProgress, skillPercentage } from "../data";
+import { fetchProgress, skillPercentage } from "../../data";
 const ProgressBar = ({ skillName }) => {
-  const skill = skillPercentage;
-  const width = fetchProgress(skill, skillName);
+  const [skill, setSkill] = useState(skillPercentage);
+  const [width, setWidth] = useState(fetchProgress(skill, skillName));
   return (
     <ProgressBarStyle width={width} className="progressBar">
       <div className="container">

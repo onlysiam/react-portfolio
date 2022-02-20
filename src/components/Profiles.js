@@ -1,16 +1,10 @@
 import React from "react";
 import git from "../img/git.svg";
 
-import linkedin from "../img/in.svg";
-
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
-import {
-  skillTitleAnimation,
-  fadeAnimation,
-  slideAnimation,
-} from "../animation";
+import { fadeAnimation } from "../animation";
 
 import { useScroll } from "./useScroll";
 
@@ -18,7 +12,7 @@ const Profiles = () => {
   const [element, controls] = useScroll();
   return (
     <ProfileStyle
-      // variants={fadeAnimation}
+      variants={fadeAnimation}
       animate={controls}
       initial="hidden"
       ref={element}
@@ -42,6 +36,7 @@ const Profiles = () => {
           </svg>
 
           <a
+            href="/#"
             onClick={() => {
               window.open("https://www.linkedin.com/in/siam-ahmed-15b967194/");
             }}
@@ -58,6 +53,7 @@ const Profiles = () => {
             alt=""
           />{" "}
           <a
+            href="/#"
             onClick={() => {
               window.open("https://github.com/onlysiam");
             }}
@@ -95,6 +91,7 @@ const Profiles = () => {
           </svg>
 
           <a
+            href="/#"
             onClick={() => {
               window.open(
                 "https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgmQMpVPqxlSmGZpbZPqTNXLsSfgMzhNLCNZgdsnbqJtNKbBZvfNWxcJPljDWWJWQGGVV"
