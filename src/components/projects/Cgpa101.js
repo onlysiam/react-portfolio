@@ -15,9 +15,6 @@ const Cgpa101 = () => {
       ref={element}
       className="cgpa101 project"
     >
-      <div className="img">
-        <img src={cgpa} alt="" />
-      </div>
       <div className="description">
         <h3>CGPA101</h3>
         <h1>An Academic Course Tracking Mobile Web Application.</h1>
@@ -44,6 +41,10 @@ const Cgpa101 = () => {
             <img src={git} alt="" />
           </button>
         </div>
+      </div>
+
+      <div className="img">
+        <img src={cgpa} alt="" />
       </div>
     </Project>
   );

@@ -1,25 +1,27 @@
 import React from "react";
-import react from "../img/react.png";
-import js from "../img/js.png";
-import html from "../img/html.png";
-import scss from "../img/scss.png";
-import vue from "../img/vue.png";
-import node from "../img/node.png";
-import laptop from "../img/laptop.jfif";
+//data
+import skillData from "./SkillCardData";
+//images
+import react from "../img/react.svg";
+import js from "../img/js.svg";
+import html from "../img/html.svg";
+import scss from "../img/sass.svg";
+import mysql from "../img/mysql.svg";
+import gitbash from "../img/gitbash.svg";
+// import vue from "../img/vue.svg";
+import php from "../img/php.svg";
+import node from "../img/node.svg";
+import redux from "../img/redux.svg";
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
-import {
-  skillTitleAnimation,
-  fadeAnimation,
-  slideAnimation,
-} from "../animation";
+import { fadeAnimation } from "../animation";
 
 import { useScroll } from "./useScroll";
+import SkillCard from "./SkillCard";
 
 const Skills = () => {
   const [element, controls] = useScroll();
-  console.log(element);
   return (
     <Skillssection
       variants={fadeAnimation}
@@ -28,77 +30,23 @@ const Skills = () => {
       ref={element}
       id="skill"
     >
-      <div className="laptop">
-        <motion.img variants={fadeAnimation} src={laptop} alt="" />
-      </div>
       <div className="description">
         <div className="title">
           <h2>Skills</h2>
         </div>
         <div className="cards">
-          <div className="upper row">
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={react} alt="" />
-                <motion.h3 variants={slideAnimation}>React</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- JSX</motion.p>
-              <motion.p variants={skillTitleAnimation}>- Router Dom</motion.p>
-              <motion.p variants={skillTitleAnimation}>- Redux</motion.p>
-            </motion.div>
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={js} alt="" />
-                <motion.h3 variants={slideAnimation}>JavaScript</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- ES5, ES6</motion.p>
-              <motion.p variants={skillTitleAnimation}>
-                - Error Handling
-              </motion.p>
-              <motion.p variants={skillTitleAnimation}>
-                - DOM Manipulation
-              </motion.p>
-            </motion.div>
-          </div>
-          <div className="middle row">
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={vue} alt="" />
-                <motion.h3 variants={slideAnimation}>Vue.js</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- Learning</motion.p>
-            </motion.div>
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={node} alt="" />
-                <motion.h3 variants={slideAnimation}>Node.JS</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- Express</motion.p>
-              <motion.p variants={skillTitleAnimation}>- Axios</motion.p>
-            </motion.div>
-          </div>
-          <div className="lower row">
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={html} alt="" />
-                <motion.h3 variants={slideAnimation}>HTML & Css</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- HTML5</motion.p>
-              <motion.p variants={skillTitleAnimation}>
-                - Responsive Design
-              </motion.p>
-              <motion.p variants={skillTitleAnimation}>
-                - Built From Scratch
-              </motion.p>
-            </motion.div>
-            <motion.div variants={slideAnimation} className="card">
-              <div className="icon">
-                <img src={scss} alt="" />
-                <motion.h3 variants={slideAnimation}>Sass</motion.h3>
-              </div>
-              <motion.p variants={skillTitleAnimation}>- Mapping</motion.p>
-            </motion.div>
-          </div>
+          <SkillCard data={skillData.react} image={react} />
+          <SkillCard data={skillData.js} image={js} />
+          <SkillCard data={skillData.html} image={html} />
+          <SkillCard data={skillData.redux} image={redux} />
+          <SkillCard data={skillData.node} image={node} />
+          <SkillCard data={skillData.sass} image={scss} />
+          <SkillCard data={skillData.git} image={gitbash} />
+          <SkillCard data={skillData.mysql} image={mysql} />
+          <SkillCard data={skillData.php} image={php} />
+        </div>
+        <div className="otherSkills">
+          <div className="webDesign"></div>
         </div>
       </div>
     </Skillssection>
@@ -108,16 +56,11 @@ const Skills = () => {
 const Skillssection = styled(motion.div)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5rem 15vw 0rem 15vw;
+  justify-content: center;
   z-index: 2;
-  .laptop {
-    z-index: 2;
-    img {
-      z-index: 2;
-      height: 25rem;
-    }
-  }
+  width: 100vw;
+  padding: 0rem 15vw 0rem 15vw;
+
   .description {
     z-index: 2;
     .title {
@@ -136,167 +79,62 @@ const Skillssection = styled(motion.div)`
     .cards {
       z-index: 2;
       display: flex;
-      flex-direction: column;
-      flex: 1;
+      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
+      gap: 5rem 2rem;
+      width: 70vw;
+      margin-top: 3rem;
       .row {
         display: flex;
-      }
-      .card {
-        display: flex;
-        width: 15rem;
-        flex-direction: column;
-        margin-top: 3rem;
-        margin-right: 5rem;
-        .icon {
-          display: flex;
-          align-items: center;
-          padding-bottom: 10px;
-        }
-        h3 {
-          padding-left: 10px;
-          font-size: 1.7rem;
-          font-weight: 400;
-          color: #72d9ff;
-        }
-        p {
-          padding-left: 20px;
-          font-size: 1.2rem;
-          font-weight: 200;
-          color: #cdffff;
-        }
-        img {
-          height: 4rem;
-        }
       }
     }
   }
 
-  @media (max-width: 1850px) {
-    padding: 5rem 10vw 0rem 10vw;
-  }
   @media (max-width: 1600px) {
-    padding: 5rem 10vw 0rem 10vw;
-    .laptop {
-      img {
-        height: 20rem;
-      }
-    }
+    padding: 0rem 10vw 0rem 10vw;
     .description {
       .title {
         h2 {
           font-size: 4rem;
         }
       }
-      .cards {
-        .card {
-          h3 {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: 1rem;
-          }
-          img {
-            height: 4rem;
-          }
-        }
-      }
     }
   }
   @media (max-width: 1400px) {
-    padding: 5rem 8vw 0rem 8vw;
-    .laptop {
-      img {
-        height: 20rem;
-      }
-    }
+    padding: 0rem 8vw 0rem 8vw;
+    width: 84vw;
     .description {
       .title {
         h2 {
           font-size: 3.5rem;
         }
       }
-      .cards {
-        .card {
-          margin-right: 1rem;
-          h3 {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: 1rem;
-          }
-          img {
-            height: 4rem;
-          }
-        }
-      }
     }
   }
 
   @media (max-width: 1200px) {
-    padding: 5rem 8vw 0rem 8vw;
-    .laptop {
-      img {
-        height: 20rem;
-      }
-    }
     .description {
       .title {
         h2 {
           font-size: 3.1rem;
         }
       }
-      .cards {
-        .card {
-          width: 10rem;
-          margin-right: 4rem;
-          h3 {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: 1rem;
-          }
-          img {
-            height: 3rem;
-          }
-        }
-      }
     }
   }
 
   @media (max-width: 1100px) {
-    padding: 3rem 6vw 0rem 6vw;
-    .laptop {
-      img {
-        height: 16rem;
-      }
-    }
+    padding: 0rem 6vw 0rem 6vw;
+    width: 88vw;
     .description {
       .title {
         h2 {
           font-size: 2.9rem;
         }
       }
-      .cards {
-        .card {
-          width: 8rem;
-          margin-right: 3rem;
-          h3 {
-            font-size: 1.2rem;
-          }
-          p {
-            font-size: 0.8rem;
-          }
-          img {
-            height: 3rem;
-          }
-        }
-      }
     }
   }
   @media (max-width: 850px) {
-    padding: 3rem 3vw 0rem 3vw;
     .description {
       .title {
         h2 {
@@ -304,31 +142,11 @@ const Skillssection = styled(motion.div)`
           margin-bottom: 1rem;
         }
       }
-      .cards {
-        .card {
-          width: 8rem;
-          margin-right: 3rem;
-          margin-top: 1rem;
-          h3 {
-            font-size: 1.2rem;
-          }
-          p {
-            font-size: 0.8rem;
-          }
-          img {
-            height: 3rem;
-          }
-        }
-      }
     }
   }
   @media (max-width: 700px) {
-    flex-direction: column;
-    .laptop {
-      img {
-        display: none;
-      }
-    }
+    padding: 0rem 6vw 0rem 6vw;
+    width: 88vw;
     .description {
       .title {
         h2 {
@@ -336,21 +154,28 @@ const Skillssection = styled(motion.div)`
           margin-bottom: 1rem;
         }
       }
-      .cards {
-        .card {
-          width: 8rem;
-          margin-right: 3rem;
-          margin-top: 1rem;
-          h3 {
-            font-size: 1.2rem;
-          }
-          p {
-            font-size: 0.8rem;
-          }
-          img {
-            height: 3rem;
-          }
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 0rem 0vw 0rem 0vw;
+    width: 100vw;
+    .description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0rem 0vw 0rem 0vw;
+      .title {
+        h2 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
         }
+      }
+      .cards {
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: 1rem;
       }
     }
   }

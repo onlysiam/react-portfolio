@@ -27,11 +27,17 @@ const About = () => {
         <div className="cards">
           <motion.div variants={cardAnimation} className="card">
             <h3>Web Developer</h3>
-            <p>Passionate about front-end designing & programming.</p>
+            <p>
+              I am a Full Stack Web Developer focusing on front-end
+              technologies.
+            </p>
           </motion.div>
           <motion.div variants={cardAnimation} className="card">
             <h3>Proficiency</h3>
-            <p>I have a decent knowledge about HTML5,Sass, ReactJS. </p>
+            <p>
+              I have a decent knowledge of React.js, Node.js, HTML5, CSS &
+              front-end designs.{" "}
+            </p>
           </motion.div>
           <motion.div variants={cardAnimation} className="card">
             <h3>NSUer</h3>
@@ -49,10 +55,10 @@ const About = () => {
 
 const Aboutsection = styled(motion.div)`
   min-height: 90vh;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  display: flex;
-  padding: 5rem 15vw 13rem 15vw;
+  padding: 5rem 15vw 7rem 15vw;
   z-index: 2;
   .description {
     z-index: 2;
@@ -75,6 +81,8 @@ const Aboutsection = styled(motion.div)`
       .card {
         padding: 10px;
         background-color: #282f51;
+
+        background: linear-gradient(340deg, #282f51, rgba(66, 66, 66, 0));
         margin-right: 1rem;
       }
       h3 {
@@ -97,7 +105,7 @@ const Aboutsection = styled(motion.div)`
   }
 
   @media (max-width: 1650px) {
-    padding: 5rem 10vw 13rem 10vw;
+    padding: 5rem 10vw 7rem 10vw;
     .image {
       z-index: 2;
       img {
@@ -135,7 +143,7 @@ const Aboutsection = styled(motion.div)`
     }
   }
   @media (max-width: 1200px) {
-    padding: 9rem 6vw 10rem 6vw;
+    padding: 9rem 6vw 7rem 6vw;
     .description {
       .title {
         h1 {
@@ -235,7 +243,22 @@ const Aboutsection = styled(motion.div)`
     }
   }
   @media (max-width: 500px) {
-    padding: 18rem 6vw 8rem 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18rem 5vw 8rem 5vw;
+    .description {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10vw;
+      .cards {
+        display: flex;
+        width: 90vw;
+      }
+    }
     .image {
       position: absolute;
       top: 15%;

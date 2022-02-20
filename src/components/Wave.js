@@ -18,8 +18,8 @@ const Wave = () => {
         d="M544 3C329 138 -30.5 407 251.5 403C533.5 399 203 700.333 2.5 851.5"
         stroke="#60C4C4"
         strokeOpacity="0.5"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </WaveSvg>
   );

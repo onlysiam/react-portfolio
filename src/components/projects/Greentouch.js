@@ -15,6 +15,9 @@ const Greentouch = () => {
       ref={element}
       className="greentouch project"
     >
+      <div className="img">
+        <img src={gt} alt="" />
+      </div>
       <div className="description">
         <h3>Greentouch Group</h3>
         <h1>Official Website Of Greentouch Group.</h1>
@@ -40,9 +43,6 @@ const Greentouch = () => {
             <img src={git} alt="" />
           </button>
         </div>
-      </div>
-      <div className="img">
-        <img src={gt} alt="" />
       </div>
     </Project>
   );
