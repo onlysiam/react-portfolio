@@ -17,12 +17,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { fadeAnimation } from "../animation";
 //components
-import { useScroll } from "./useScroll";
+import { useScroll, useScrollSkill } from "./useScroll";
 import SkillCard from "./skills/SkillCard";
 import SecondarySkills from "./skills/SecondarySkills";
 
 const Skills = () => {
   const [element, controls] = useScroll();
+  const [elementSkill, controlSkill] = useScrollSkill();
   return (
     <Skillssection
       variants={fadeAnimation}
@@ -46,7 +47,14 @@ const Skills = () => {
           <SkillCard data={skillData.mysql} image={mysql} />
           <SkillCard data={skillData.php} image={php} />
         </div>
-        <SecondarySkills />
+        <motion.div
+          variants={fadeAnimation}
+          animate={controlSkill}
+          initial="hidden"
+          ref={elementSkill}
+        >
+          <SecondarySkills />
+        </motion.div>
       </div>
     </Skillssection>
   );
