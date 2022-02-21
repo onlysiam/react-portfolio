@@ -7,6 +7,8 @@ A react based seamless working portfolio for web developers.
 
 **Client:** React, HTML5, CSS(Styled Components)
 
+**Animations:** Framer Motion
+
 
 ## Demo
 
