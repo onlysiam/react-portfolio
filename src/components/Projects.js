@@ -95,8 +95,16 @@ const Projectstyle = styled(motion.div)`
       }
     }
   }
-  @media (max-width: 1600px) {
-    padding: 5rem 10vw 0rem 10vw;
+  @media (max-width: 1800px) {
+    .projects {
+      .project {
+        .img {
+          img {
+            height: 30rem;
+          }
+        }
+      }
+    }
   }
   @media (max-width: 1400px) {
     padding: 5rem 8vw 0rem 8vw;
