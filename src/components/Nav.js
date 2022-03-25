@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 import styled from "styled-components";
 import { scroller, Link } from "react-scroll";
 const Nav = () => {
+  const [resumeUrl, setResumeUrl] = useState(
+    "https://drive.google.com/file/d/1k_0QWuVRzgOcfHvkHGbYJcpyKNCfWSpj/view?usp=sharing"
+  );
+  useEffect(() => {
+    const url = "https://onlysiam.com/api/resume" + "/" + "onlysiam";
+    Axios.get(url, {
+      username: "onlysiam",
+    }).then((response) => {
+      if (response.data) {
+        setResumeUrl(response.data[0].resume);
+      }
+    });
+  }, []);
   return (
     <NavStyled>
       <h1>
@@ -32,6 +46,7 @@ const Nav = () => {
             spy={true}
             smooth={true}
             duration={500}
+            offset={-110}
           >
             SKILLS
           </Link>
@@ -72,9 +87,7 @@ const Nav = () => {
             smooth={true}
             duration={500}
             onClick={() => {
-              window.open(
-                "https://drive.google.com/file/d/1x_qmeB9ZRdj_fh6t6AlOMRo8iY2ectnU/view?usp=sharing"
-              );
+              window.open(resumeUrl);
             }}
           >
             RÉSUMÉ

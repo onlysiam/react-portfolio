@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { AnimatePresence } from "framer-motion";
+import Admin from "./components/Admin";
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutPage />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </AnimatePresence>
     </div>

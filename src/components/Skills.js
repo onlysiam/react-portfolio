@@ -5,17 +5,19 @@ import skillData from "./skills/SkillCardData";
 import react from "../img/react.svg";
 import js from "../img/js.svg";
 import html from "../img/html.svg";
+import tailwind from "../img/tailwind.svg";
 import scss from "../img/sass.svg";
 import mysql from "../img/mysql.svg";
 import gitbash from "../img/gitbash.svg";
 // import vue from "../img/vue.svg";
+import mongo from "../img/mongo.svg";
 import php from "../img/php.svg";
 import node from "../img/node.svg";
 import redux from "../img/redux.svg";
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
-import { fadeAnimation } from "../animation";
+import { fadeAnimation, slideAnimation } from "../animation";
 //components
 import { useScroll, useScrollSkill } from "./useScroll";
 import SkillCard from "./skills/SkillCard";
@@ -36,22 +38,25 @@ const Skills = () => {
         <div className="title">
           <h2>Skills</h2>
         </div>
-        <div className="cards">
+        <motion.div variants={slideAnimation} className="cards">
           <SkillCard data={skillData.react} image={react} />
           <SkillCard data={skillData.js} image={js} />
           <SkillCard data={skillData.html} image={html} />
           <SkillCard data={skillData.redux} image={redux} />
           <SkillCard data={skillData.node} image={node} />
+          <SkillCard data={skillData.tailwind} image={tailwind} />
           <SkillCard data={skillData.sass} image={scss} />
           <SkillCard data={skillData.git} image={gitbash} />
           <SkillCard data={skillData.mysql} image={mysql} />
+          <SkillCard data={skillData.mongo} image={mongo} />
           <SkillCard data={skillData.php} image={php} />
-        </div>
+        </motion.div>
         <motion.div
           variants={fadeAnimation}
           animate={controlSkill}
           initial="hidden"
           ref={elementSkill}
+          className="secondary"
         >
           <SecondarySkills />
         </motion.div>
@@ -66,9 +71,10 @@ const Skillssection = styled(motion.div)`
   justify-content: center;
   z-index: 2;
   width: 100vw;
-  padding: 0rem 15vw 0rem 15vw;
+  padding: 0rem 10vw 0rem 10vw;
 
   .description {
+    width: 100%;
     z-index: 2;
     .title {
       h1 {
@@ -89,12 +95,15 @@ const Skillssection = styled(motion.div)`
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
-      gap: 5rem 2rem;
-      width: 70vw;
+      gap: 5rem 3rem;
+      width: 100%;
       margin-top: 3rem;
       .row {
         display: flex;
       }
+    }
+    .secondary {
+      width: 100%;
     }
   }
 

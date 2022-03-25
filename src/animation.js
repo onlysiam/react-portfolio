@@ -65,10 +65,11 @@ export const projectAnimation = {
 };
 
 export const slideAnimation = {
-  hidden: { opacity: 0, x: 100, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, x: 50, scale: 1.05, transition: { duration: 0.3 } },
   show: {
     opacity: 1,
     x: 0,
+    scale: 1,
     transition: {
       ease: "easeOut",
       duration: 1,
@@ -86,10 +87,16 @@ export const skillTitleAnimation = {
 };
 
 export const fadedSlideLeft = {
-  hidden: { opacity: 0, x: 200, transition: { duration: 0.3 } },
+  hidden: {
+    opacity: 0,
+    x: 100,
+    scale: 1.1,
+    transition: { duration: 0.3 },
+  },
   show: {
     opacity: 1,
     x: 0,
+    scale: 1,
     transition: {
       ease: "easeOut",
       duration: 1,
@@ -98,10 +105,11 @@ export const fadedSlideLeft = {
 };
 
 export const fadedSlideRight = {
-  hidden: { opacity: 0, x: -200, transition: { duration: 0.3 } },
+  hidden: { opacity: 0, x: -100, scale: 1.1, transition: { duration: 0.3 } },
   show: {
     opacity: 1,
     x: 0,
+    scale: 1,
     transition: {
       ease: "easeOut",
       duration: 1,

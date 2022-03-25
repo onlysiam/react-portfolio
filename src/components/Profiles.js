@@ -171,7 +171,7 @@ const ProfileStyle = styled(motion.div)`
   justify-content: space-between;
   z-index: 2;
   h2 {
-    padding: 12rem 15vw 0rem 15vw;
+    padding: 12rem 10vw 0rem 10vw;
     margin-bottom: 2rem;
     font-size: 4rem;
     font-weight: 600;
@@ -342,6 +342,11 @@ const ProfileStyle = styled(motion.div)`
         padding: 0;
       }
     }
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

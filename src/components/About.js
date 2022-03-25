@@ -58,7 +58,9 @@ const Aboutsection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 15vw 7rem 15vw;
+  padding: 5rem 15vw 0rem 15vw;
+
+  margin-bottom: 7rem;
   z-index: 2;
   .description {
     z-index: 2;
@@ -106,7 +108,8 @@ const Aboutsection = styled(motion.div)`
   }
 
   @media (max-width: 1650px) {
-    padding: 5rem 10vw 7rem 10vw;
+    padding: 5rem 10vw 0rem 10vw;
+    margin-bottom: 7rem;
     .image {
       z-index: 2;
       img {
@@ -115,7 +118,8 @@ const Aboutsection = styled(motion.div)`
     }
   }
   @media (max-width: 1450px) {
-    padding: 5rem 8vw 13rem 8vw;
+    padding: 5rem 8vw 0rem 8vw;
+    margin-bottom: 13rem;
     .description {
       .title {
         h1 {
@@ -144,7 +148,8 @@ const Aboutsection = styled(motion.div)`
     }
   }
   @media (max-width: 1200px) {
-    padding: 9rem 6vw 7rem 6vw;
+    padding: 9rem 6vw 0rem 6vw;
+    margin-bottom: 7rem;
     .description {
       .title {
         h1 {
@@ -247,7 +252,8 @@ const Aboutsection = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18rem 5vw 8rem 5vw;
+    padding: 18rem 5vw 0rem 5vw;
+    margin-bottom: 7rem;
     .description {
       width: 90vw;
       display: flex;

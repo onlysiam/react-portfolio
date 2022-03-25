@@ -1,6 +1,10 @@
 import React from "react";
 
 import styled from "styled-components";
+//data
+import { projectsData } from "../data";
+
+import nsuaide from "../img/nsu.png";
 
 import wc from "../img/wc.png";
 import surela from "../img/surela.png";
@@ -9,26 +13,12 @@ import cgpa from "../img/cgpa.png";
 import git from "../img/git.png";
 
 import { motion } from "framer-motion";
-import {
-  skillTitleAnimation,
-  fadeAnimation,
-  slideAnimation,
-  fadedSlideLeft,
-  fadedSlideRight,
-} from "../animation";
+import { fadeAnimation, fadedSlideLeft, fadedSlideRight } from "../animation";
 
 import { useScroll } from "./useScroll";
-import NsuAide from "./projects/NsuAide";
-import Weathercloset from "./projects/Weathecloset";
-import Surela from "./projects/Surela";
-import Greentouch from "./projects/Greentouch";
-import Cgpa101 from "./projects/Cgpa101";
+import Project from "./projects/Project";
+
 const Projects = () => {
-  const [element1, controls1] = useScroll();
-  const [element2, controls2] = useScroll();
-  const [element3, controls3] = useScroll();
-  const [element4, controls4] = useScroll();
-  const [element5, controls5] = useScroll();
   const [element6, controls6] = useScroll();
 
   const nsuaideHandler = () => {
@@ -49,11 +39,31 @@ const Projects = () => {
         </motion.h2>
       </div>
       <div className="projects">
-        <NsuAide />
-        <Cgpa101 />
-        <Surela />
-        <Weathercloset />
-        <Greentouch />
+        <Project
+          animation={fadedSlideLeft}
+          image={nsuaide}
+          data={projectsData.nsuaide}
+        />
+        <Project
+          animation={fadedSlideRight}
+          image={wc}
+          data={projectsData.weathercloset}
+        />
+        <Project
+          animation={fadedSlideLeft}
+          image={cgpa}
+          data={projectsData.cgpa101}
+        />
+        <Project
+          animation={fadedSlideRight}
+          image={surela}
+          data={projectsData.surela}
+        />
+        <Project
+          animation={fadedSlideLeft}
+          image={gt}
+          data={projectsData.greentouch}
+        />
       </div>
     </Projectstyle>
   );
@@ -63,14 +73,26 @@ const Projectstyle = styled(motion.div)`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 15rem;
-  padding: 5rem 15vw 0rem 15vw;
+  margin-top: 5rem;
+  padding: 5rem 10vw 0rem 10vw;
   .title {
     h2 {
       font-size: 4rem;
       font-weight: 600;
       color: #70e8fd;
       margin-bottom: 5rem;
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    .project {
+      .img {
+        img {
+          height: 35rem;
+        }
+      }
     }
   }
   @media (max-width: 1600px) {
@@ -193,6 +215,10 @@ const Projectstyle = styled(motion.div)`
         }
       }
     }
+  }
+  @media (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 export default Projects;

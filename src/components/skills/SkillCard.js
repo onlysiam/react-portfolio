@@ -9,18 +9,16 @@ import { motion } from "framer-motion";
 import { skillTitleAnimation, slideAnimation } from "../../animation";
 const SkillCard = ({ data, image }) => {
   return (
-    <Card variants={slideAnimation} className="card">
+    <Card className="card">
       <div className="icon">
         <img src={image} alt={data.image} />
-        <motion.h3 variants={slideAnimation}>{data.name}</motion.h3>
+        <motion.h3>{data.name}</motion.h3>
       </div>
       {data.ptags.map((ptag, id) => (
-        <motion.p key={id} variants={skillTitleAnimation}>
-          - {ptag.body}
-        </motion.p>
+        <motion.p key={id}>- {ptag.body}</motion.p>
       ))}
 
-      <motion.div variants={slideAnimation} className="progressBar">
+      <motion.div className="progressBar">
         <ProgressBar skillName={data.progress} />
       </motion.div>
     </Card>

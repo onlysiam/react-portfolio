@@ -31,10 +31,10 @@ const SecondarySkills = () => {
 
 const SecondarySkill = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  width: 70vw;
-  margin-top: 5rem;
+  width: 100%;
+  margin-top: 6rem;
   .card {
     display: flex;
     justify-content: space-between;

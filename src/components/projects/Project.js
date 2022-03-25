@@ -1,44 +1,50 @@
-import { useScroll } from "../useScroll";
+import { useScrollprojects } from "../useScroll";
 import styled from "styled-components";
-import nsu from "../../img/nsu.png";
 import git from "../../img/git.png";
 //animations
 import { motion } from "framer-motion";
-import { fadedSlideLeft } from "../../animation";
-const NsuAide = () => {
-  const [element, controls] = useScroll();
+const Project = ({ image, data, animation }) => {
+  const [element, controls] = useScrollprojects();
   return (
-    <Project
-      variants={fadedSlideLeft}
+    <ProjectStyle
+      variants={animation}
       animate={controls}
       initial="hidden"
       ref={element}
       className="nsuaide project"
     >
       <div className="img">
-        <img src={nsu} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="description">
-        <h3>NSU Aide</h3>
-        <h1>An Web-Assistant For Academic Help.</h1>
+        <h3>{data.name}</h3>
+        <h1>{data.description}</h1>
         <div className="details">
-          <p>- React.js</p>
-          <p>- Node.js</p>
-          <p>- Axios</p>
-          <p>- Express</p>
-          <p>- MySQL</p>
+          <h2>Technologies:</h2>
+          <div className="technologies">
+            {data.technologies.map((item, index) => {
+              return <p key={index}>{item}</p>;
+            })}
+          </div>
+          {data.api ? <h2>APIs:</h2> : ""}
+          <div className="technologies">
+            {data.api &&
+              data.api.map((item, index) => {
+                return <p key={index}>{item}</p>;
+              })}
+          </div>
         </div>
         <div className="viewWork">
           <button
             onClick={() => {
-              window.open("https://rds.onlysiam.com/");
+              window.open(data.liveweb);
             }}
           >
             View work
           </button>
           <button
             onClick={() => {
-              window.open("https://github.com/onlysiam/campus-assistant-react");
+              window.open(data.git);
             }}
             id="git"
           >
@@ -46,41 +52,57 @@ const NsuAide = () => {
           </button>
         </div>
       </div>
-    </Project>
+    </ProjectStyle>
   );
 };
 
-const Project = styled(motion.div)`
+const ProjectStyle = styled(motion.div)`
   display: flex;
   align-items: center;
-  margin-bottom: 10rem;
+  gap: 3rem;
   .img {
     img {
-      height: 30rem;
+      height: 50rem;
     }
   }
   .description {
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
     h1 {
-      padding-left: 10px;
-      margin-bottom: 1rem;
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       font-weight: 200;
+      color: #70e8fd;
+    }
+    h2 {
+      margin: 1rem 0rem;
+      font-size: 1.2rem;
+      font-weight: 400;
       color: #70e8fd;
     }
     h3 {
-      padding-left: 10px;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 400;
       color: #03e8b9;
     }
-    p {
-      padding-left: 20px;
-      font-size: 1.6rem;
-      font-weight: 200;
-      color: #70e8fd;
+    .details {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      .technologies {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        p {
+          padding: 5px 10px;
+          background-color: #70e8fd;
+          font-size: 1rem;
+          border-radius: 5px;
+          font-weight: 600;
+          color: black;
+        }
+      }
     }
     .viewWork {
       display: flex;
@@ -115,4 +137,4 @@ const Project = styled(motion.div)`
   }
 `;
 
-export default NsuAide;
+export default Project;

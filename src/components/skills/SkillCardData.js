@@ -3,13 +3,13 @@ const skillData = {
     name: "React",
     image: "react",
     progress: "react",
-    ptags: [{ body: "Hooks" }, { body: "Router" }],
+    ptags: [{ body: "Hooks" }, { body: "Router" }, { body: "Material-UI" }],
   },
   js: {
     name: "Java Script",
     image: "js",
     progress: "js",
-    ptags: [{ body: "Es6" }],
+    ptags: [{ body: "ES6" }, { body: "Animations" }],
   },
   html: {
     name: "HTML & CSS",
@@ -25,9 +25,15 @@ const skillData = {
   },
   node: {
     name: "Node.JS",
-    image: "react",
-    progress: "react",
-    ptags: [{ body: "RESTful APIs" }, { body: "Express, Axios" }],
+    image: "node",
+    progress: "node",
+    ptags: [{ body: "Express" }, { body: "RESTful APIs" }, { body: "Axios" }],
+  },
+  tailwind: {
+    name: "TailwindCSS",
+    image: "tailwind",
+    progress: "tailwind",
+    ptags: [{ body: "Responsive Design" }, { body: "Reusable Styles" }],
   },
   sass: {
     name: "Sass",
@@ -46,6 +52,12 @@ const skillData = {
     image: "mysql",
     progress: "mysql",
     ptags: [{ body: "InnoDB" }, { body: "Complex Queries" }],
+  },
+  mongo: {
+    name: "MongoDB",
+    image: "mongodb",
+    progress: "mongodb",
+    ptags: [{ body: "Mongoose" }, { body: "Joi Validation" }],
   },
   php: {
     name: "PHP",
