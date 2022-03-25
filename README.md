@@ -1,3 +1,22 @@
+
+# A Responsive Portfolio
+
+A react based seamless working portfolio for web developers.
+
+## Built With
+
+**Client:** React, HTML5, CSS(Styled Components)
+
+**Animations:** Framer Motion
+
+
+## Demo
+
+https://onlysiam.com
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
